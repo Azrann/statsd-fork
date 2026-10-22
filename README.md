@@ -1,21 +1,23 @@
+**Languages:** [English](README.md) · [Español](README.es.md)
+
 # statsd-fork
 
-Copia histórica de StatsD 0.8.0.
+Historical copy of StatsD 0.8.0.
 
 <!-- BEGIN project-context -->
 
-## Antigüedad y evidencia
+## Historical dates and evidence
 
-**Año de referencia de esta versión: 2017.** Se toma el archivo de código o configuración más reciente con una fecha histórica recuperable; no se ha podido confirmar la fecha exacta de creación.
+**Reference year for this version: 2017.** This uses the most recent source or configuration file with a recoverable historical date; the exact creation date could not be confirmed.
 
-- Archivo más reciente datable: **2017-11-26**, [`statsd/test/set_tests.js`](statsd/test/set_tests.js); fecha de modificación conservada.
-- Primer registro del repositorio Git original que contiene este código: **2010-12-30**. Puede corresponder a una importación; no prueba cuándo se escribió por primera vez.
+- Most recent datable file: **2017-11-26**, [`statsd/test/set_tests.js`](statsd/test/set_tests.js); preserved modification timestamp.
+- First record in the original Git repository containing this code: **2010-12-30**. This may be an import and does not establish when the code was first written.
 
-## Por qué merece la pena mirarlo
+## Why this is worth exploring
 
-El recorrido recepción de métricas → agregación → envío periódico a backends concentra la idea principal del servicio. Es una buena lectura para entender contadores, tiempos y medidores sin depender de una plataforma de observabilidad completa.
+The receive metrics → aggregate → periodically send to backends flow captures the service's central idea. It is a good way to understand counters, timers, and gauges without relying on a complete observability platform.
 
-Puntos de entrada al código:
+Code entry points:
 
 - [`stats.js`](statsd/stats.js)
 - [`lib`](statsd/lib/)
@@ -23,36 +25,36 @@ Puntos de entrada al código:
 
 <!-- END project-context -->
 
-## Contenido
+## Contents
 
-| Directorio | Función |
+| Directory | Function |
 | --- | --- |
-| [`statsd/`](statsd/) | Copia de StatsD 0.8.0, servicio Node.js que recibe métricas, agrega contadores/temporizadores/medidores y envía resultados a backends configurables. |
+| [`statsd/`](statsd/) | Copy of StatsD 0.8.0, a Node.js service that receives metrics, aggregates counters/timers/gauges, and sends results to configurable backends. |
 
-Derivación importada de etsy/statsd. Se conserva LICENSE. El historial local anterior no se publica.
+Imported derivative of etsy/statsd. LICENSE is retained. The previous local history is not published.
 
-## Requisitos y preparación
+## Requirements and setup
 
-Node.js y npm.
+Node.js and npm.
 
-Esta es una copia histórica. Consultar los archivos de proyecto y los README de cada componente para sus versiones y dependencias. Restaurar NuGet/npm desde la carpeta correspondiente; las bibliotecas internas pueden necesitar reconstrucción. Preparar las bases de datos y los servicios externos con cuentas propias.
+This is a historical copy. Consult each component's project files and README for versions and dependencies. Restore NuGet/npm from the appropriate folder; internal libraries may need rebuilding. Prepare databases and external services using your own accounts.
 
-Paquetes JavaScript principales:
+Main JavaScript packages:
 
 - `statsd/package.json`
 
-## Configuración y seguridad
+## Configuration and security
 
-Los secretos originales se han eliminado o sustituido por `REPLACE_WITH_YOUR_VALUE`. Buscar este marcador antes de ejecutar y aportar los valores mediante configuración local o variables de entorno. Las sesiones, claves privadas, certificados de firma, bases de datos, registros, perfiles de despliegue y paquetes binarios no se publican. El `.gitignore` protege estos archivos locales.
+Original secrets have been removed or replaced with `REPLACE_WITH_YOUR_VALUE`. Search for this marker before running and provide values through local configuration or environment variables. Sessions, private keys, signing certificates, databases, logs, deployment profiles, and binary packages are not published. The `.gitignore` protects these local files.
 
-Se publica un historial nuevo: los commits antiguos permanecen únicamente en la copia local original. Los valores de ejemplo no permiten conectarse a los servicios originales.
+A fresh history is published: old commits remain only in the original local copy. Example values cannot connect to the original services.
 
-## Estado de validación
+## Validation status
 
-Se realizó una revisión estática y un escaneo de secretos antes de publicar. No se ejecutaron aplicaciones, operaciones de trading, despliegues ni pruebas que contacten servicios externos. No se garantiza la compilación con herramientas actuales. Algunos proyectos necesitan dependencias históricas y activos que no están incluidos.
+A static review and secret scan were performed before publication. Applications, trading operations, deployments, and tests contacting external services were not run. Building with current tools is not guaranteed. Some projects need historical dependencies and assets that are not included.
 
-## Licencias y procedencia
+## Licenses and provenance
 
-Se conservan las licencias y atribuciones de terceros presentes en el código. No se añade una licencia global a los componentes que no la tenían. Esta importación conserva fuentes locales y no afirma ser una versión actual del proyecto original.
+Third-party licenses and attributions present in the code are retained. No blanket license is added to components that lacked one. This import preserves local sources and does not claim to be a current version of the original project.
 
-Proyecto de procedencia: [código original](https://github.com/etsy/statsd). Esta es una importación independiente de la copia local, con historial nuevo.
+Upstream project: [original source](https://github.com/etsy/statsd). This is an independent import of the local copy, with a fresh history.
